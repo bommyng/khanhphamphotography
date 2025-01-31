@@ -1,0 +1,489 @@
+/*--Navigation Big Screen*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.scrolled {
+  background-color: var(--p-colour07);
+  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  color: white;
+  transition: background-color 0.6s ease, color 0.5s ease;
+}
+
+#big-screen li {
+  float: left;
+  margin: 5px;
+}
+
+#big-screen {
+  text-align: center;
+  animation-duration: 2s;
+  color: white;
+}
+
+#big-screen a:hover {
+  background: var(--p-colour07);
+  border-radius: 10px;
+  color: var(--p-colour06) !important;
+  transition: 0.3s;
+}
+
+
+
+.icon-menu {
+  width: fit-content;
+  border-radius: 50%;
+  background-color: var(--p-colour02);
+}
+
+#big-screen a:active {
+  background: var(--p-colour01);
+  border-radius: 10px;
+  color: var(--p-colour06) !important;
+  transition: 0.3s;
+}
+
+#big-screen li>a {
+  display: inline-block;
+  color: var(--p-colour06) !important;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+#big-screen svg {
+  width: 300px;
+}
+
+#menu li,
+#menu a,
+#menu,
+#big-screen li {
+  text-decoration: none;
+  color: black;
+  font-family: 'Louis George Cafe' !important;
+}
+
+.header-transparent {
+  background: var(--p-colour04);
+}
+
+.logo {
+  width: 100px !important;
+  padding: 10px !important;
+}
+
+.nav-bar {
+  background-color: transparent;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+  width: 102%;
+  margin-left: -1%;
+}
+
+
+nav ul {
+  background: transparent;
+  display: inline-block;
+  color: var(--p-colour06) !important;
+}
+
+/*--*/
+
+
+
+/*
+   * Made by Erik Terwan
+   * 24th of November 2015
+   * MIT license
+   *
+   *
+   * If you are thinking of using this in
+   * production code, beware of the browser
+   * prefixes.
+   */
+
+body {
+  margin: 0;
+  padding: 0;
+  /* make it look decent enough */
+  background: #232323;
+  color: white;
+  font-family: 'Louis George Cafe', sans-serif !important;
+  overflow-x: hidden;
+  /* needed because hiding the menu on the right side is not perfect,  */
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+
+/*
+   * Just a quick hamburger
+   */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #7d6dde;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: -webkit-linear-gradient(45deg, white, #7d6dde 98%);
+}
+
+
+
+.say-hello {
+  color: #cbc9e2;
+  letter-spacing: 0.25em;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+/*
+   * But let's hide the middle one.
+   */
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+   * Ohyeah and the last one should go the other direction
+   */
+#menuToggle input:checked~span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+nav ul {
+  padding-left: 0px;
+}
+
+/*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 30px;
+  padding-top: 125px;
+
+  background: rgba(255, 255, 255, 0.8);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+
+
+/*
+   * And let's fade it in from the left
+   */
+#menuToggle input:checked~ul {
+  transform: none;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+}
+
+/*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+#menu {
+  position: absolute;
+  width: 250px;
+  margin: -45px 90px 0 -50px;
+  padding: 50px;
+  padding-top: 85px;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(200%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 8px;
+  font-size: 15px !important;
+}
+
+/*
+   * And let's slide it in from the left
+   */
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+
+
+
+
+
+/*---------------------*/
+
+
+
+.fbQokD.menu-toggle {
+  z-index: 999;
+  width: 2.78em;
+  height: 2.09em;
+  background: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-flexbox;
+  display: inline-flex;
+  margin-top: 0.699em;
+  color: #4831d4;
+}
+
+.fbQokD .menu-toggle.x:before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.fbQokD .menu-toggle:before {
+  top: 0;
+}
+
+.fbQokD .menu-toggle:before,
+.fbQokD .menu-toggle:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  background-color: currentColor;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.fbQokD .menu-toggle.x:after {
+  top: 0;
+  width: 100%;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.fbQokD .menu-toggle:after {
+  right: 0;
+  width: 72%;
+  top: 1.13em;
+}
+
+.fbQokD .menu-toggle:before,
+.fbQokD .menu-toggle:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  background-color: currentColor;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background: rgba(247, 74, 87, 1);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+ul,
+li {
+  font-family: 'SourceSansPro-Bold';
+
+}
+
+
+/*-------Loader*--------*/
+
+
+
+
+
+
+
+@media only screen and (min-width: 767px) {
+
+  #mobile-screen,
+  .mobile-screen {
+    display: none
+  }
+
+}
+
+@media only screen and (max-width: 766px) {
+
+  #big-screen,
+  .big-screen {
+    display: none
+  }
+}
+
+@keyframes animation01 {
+  from {
+    font-size: 4.4em;
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, #f4dae4 99%, #e0a5c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  to {
+    font-size: 4.4em;
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, #e0a5c1, #f4dae4 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes animation02 {
+  from {
+    color: #e1a5c1;
+  }
+
+  to {
+    color: -webkit-linear-gradient(45deg, #e0a5c1, #f4dae4 80%);
+  }
+}
+
+.footer-bar {
+  height: fit-content;
+  background-color: var(--p-colour01);
+  position: sticky;
+  padding-bottom: 20px;
+  z-index: 99;
+
+}
+
+
+footer .logo {
+  width: 150px !important;
+  margin-top: 4vh;
+}
+
+.author-title {
+  font-size: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0
+}

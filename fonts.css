@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url("font/louis_george_cafe/Louis George Cafe.ttf")
+}
+
+@font-face {
+  font-family: 'Louis George Cafe Bold';
+  src: url("font/louis_george_cafe/Louis George Cafe Bold.ttf")
+}
+
+@font-face {
+  font-family: 'Louis George Cafe Light';
+  src: url("font/louis_george_cafe/Louis George Cafe Light.ttf")
+}
+
+@font-face {
+  font-family: 'CocogooseSemi';
+  src: url("font/cocogoose/Cocogoose-Pro-Semilight-trial.ttf")
+}
+
+@font-face {
+  font-family: 'CocogooseSemi-Bold';
+  src: url("font/cocogoose/Cocogoose-Pro-Regular-trial.ttf")
+}
+
+@font-face {
+  font-family: 'Star Blush Serif Re';
+  src: url("/font/Star\ Blush\ Serif\ Regular.otf")
+}
+
+@font-face {
+  font-family: 'Star Blush Serif Bold';
+  src: url("/font/Star\ Blush\ Serif\ Bold.ttf.otf")
+}
+
+@font-face {
+  font-family: 'Chillen';
+  src: url("/font/Chillen.ttf")
+}
+
+@font-face {
+  font-family: 'VIRUST';
+  src: url("/font/VIRUST.ttf")
+}
+
+/*---Fonts----*/
+:root {
+  --font-bold: 'CocogooseSemi-Bold';
+  --font-semi: 'CocogooseSemi';
+  --s-font-regular: 'Star Blush Serif Re';
+  --p-font-regular01: 'Chillen';
+  --s-font-bold: 'Star Blush Serif Bold';
+}
