@@ -43,11 +43,24 @@
   src: url("/font/VIRUST.ttf")
 }
 
+@font-face {
+  font-family: 'IvyPresto';
+  src: url("/font/ivy-presto-display.otf")
+}
+
+@font-face {
+  font-family: 'IvyPrestoLight';
+  src: url("/font/ivy-presto-display-light.otf")
+}
+
 /*---Fonts----*/
 :root {
   --font-bold: 'CocogooseSemi-Bold';
   --font-semi: 'CocogooseSemi';
   --s-font-regular: 'Star Blush Serif Re';
+  --s-font-regular01: 'Louis George Cafe Light';
   --p-font-regular01: 'Chillen';
   --s-font-bold: 'Star Blush Serif Bold';
+  --ivypresto: 'IvyPresto'
+    --ivyprestolight: 'IvyPrestoLight'
 }
