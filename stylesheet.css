@@ -137,7 +137,7 @@ hr {
 
 /*-------Service*--------*/
 .gallery {
-  background-color: var(--bone) !important;
+  background-color: #4c4c4c !important;
   color: var(--p-colour07);
   height: fit-content !important;
   width: 100%;
@@ -159,13 +159,13 @@ hr {
   opacity: 50%;
   font-size: 4vw;
   line-height: 1;
-  letter-spacing: -5px;
+  letter-spacing: -3px;
 }
 
 .img1 {
   background: linear-gradient(to top,
       rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6), ),
+      rgba(0, 0, 0, 0.6)),
     url("/image/IMG_3650.jpg");
   height: 90vh;
   width: 100%;
@@ -174,7 +174,7 @@ hr {
   background-repeat: no-repeat;
   text-align: center;
   display: flex;
-  z-index: 1;
+  z-index: 2;
 }
 
 .img2 {
@@ -189,7 +189,7 @@ hr {
   background-repeat: no-repeat;
   text-align: center;
   display: flex;
-  z-index: 1;
+  z-index: 3;
 }
 
 .img3 {
@@ -206,6 +206,12 @@ hr {
   display: flex;
   z-index: 1;
 }
+
+
+
+
+
+
 
 /*---------------------*/
 .author-name,
@@ -282,10 +288,17 @@ button {
   background-color: var(--box-color) !important;
   border-radius: 15px;
   padding: 25px;
-  width: 45%;
-  position: absolute;
-  right: 10px;
+  width: 100%;
   height: fit-content;
+  z-index: 3;
+}
+
+.contact {
+  background-color: var(--alabaster) !important;
+  color: var(--p-colour07);
+  height: fit-content !important;
+  width: 100%;
+  padding-bottom: 50px;
 }
 
 .contact-h {
