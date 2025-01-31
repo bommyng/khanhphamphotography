@@ -285,12 +285,9 @@ button {
 
 /*----Contact----*/
 .contact-form {
-  background-color: var(--box-color) !important;
-  border-radius: 15px;
   padding: 25px;
   width: 100%;
-  height: fit-content;
-  z-index: 3;
+
 }
 
 .contact {
@@ -299,6 +296,8 @@ button {
   height: fit-content !important;
   width: 100%;
   padding-bottom: 50px;
+  display: inline-block;
+  text-align: center
 }
 
 .contact-h {
@@ -336,15 +335,14 @@ button {
 }
 
 .contact-form button {
-  background-color: var(--prim-text-color);
+  background-color: var(--p-colour07) !important;
   color: white;
   width: 100%;
   border-radius: 5px;
 }
 
 .contact-form button:hover {
-  background: rgba(77, 75, 112, 0.41);
-
+  background-color: var(--p-colour02) !important;
 }
 
 
